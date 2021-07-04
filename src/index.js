@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+class Quotebox extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            quoteText: "",
+            qInd: null,
+            // TODO
+        };
+    }
+
+    // Handleclick and other methods here
+
+    render() {
+        const qArray = [] // Store a bunch of quotes in here. Use an API ideally.
+        
+
+        return (
+            <div className="outer"> 
+                <div className="Inner">
+                    <h3>This is where quotes would go</h3>
+                </div>
+            </div>
+        )
+    }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <Quotebox />,
+    document.getElementById('root')
+  );
